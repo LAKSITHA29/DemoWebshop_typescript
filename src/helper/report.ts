@@ -8,7 +8,7 @@ report.generate({
   jsonDir: "test-results",
   reportPath: "./",
   reportName:"Playwright BDD Report",
-  pageTitle:"BookCart App test report",
+  pageTitle:"DEMO WEBSHOP TRICENTIS",
   metadata: {
     browser: {
       name: "chrome",
