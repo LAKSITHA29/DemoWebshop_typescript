@@ -24,12 +24,16 @@ export default class LoginPage {
 
   async getSuccessMessage(){
     const expected_email='wsedf@gmail.com';
-    const success_msg=this.page.locator("//input[@id='${expected_email}']");
+    const success_msg=this.page.locator("//a[@class='account' and text()='${expected_email']");
+    await success_msg.waitFor({ state: "visible",timeout: 5000  });
+    return (await success_msg.textContent())?.trim() ?? '';
   }
 
-  async getErrorMessageText(): Promise<string> {
-    const errorLocator = this.page.locator("//mat-error[@id='mat-mdc-error-0']");
-    await errorLocator.waitFor({ state: 'visible' });
-    return await errorLocator.textContent() ?? '';
+  async getBlanUserError(): Promise<string>{
+    const blank_email=this.page.locator("//div[@class='validation-summary-errors']//ul");
+    await blank_email.waitFor({ state: 'visible',timeout: 5000  });
+    return await blank_email.textContent() ?? '';
   }
+
+
 }

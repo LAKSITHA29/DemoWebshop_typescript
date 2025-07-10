@@ -14,4 +14,5 @@ Examples:
 |wsedf@gmail.com |CiK@4#UWzuiPDc |wsedf@gmail.com                        |
 |wsedf@gmail.com |Password       |The credentials provided are incorrect |
 |                |CiK@4#UWzuiPDc |No customer account found              |
+|wsedf@gmail.    |CiK@4#UWzuiPDc |Please enter a valid email address.    |
 |wsedf@gmail.com |               |The credentials provided are incorrect |
